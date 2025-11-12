@@ -1,0 +1,40 @@
+set scrolloff=5
+set incsearch
+set ideajoin
+set ideamarks
+
+let mapleader = " "
+
+command! ReloadIdeaVim source ~/.ideavimrc
+
+" Next tab
+nnoremap <leader>tn :tabnext<CR>
+
+"previous tab
+nnoremap <leader>tp :tabprev<CR>
+
+nnoremap <leader>tc :tabclose<CR>
+
+" Window navigation with Space + direction
+nnoremap <leader>wh <C-w>h
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wk <C-w>k
+nnoremap <leader>wl <C-w>l
+
+nnoremap ]e :action GotoNextError<CR>
+nnoremap [e :action GotoPreviousError<CR>
+
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+" Split window vertically
+nnoremap <leader>sv :vsplit<CR>
+
+" File explorer toggle
+nnoremap <leader>e :ActivateProjectView<CR>
+
+" File Structure popup
+nnoremap <leader>fs <Action>(FileStructurePopup)
+
+" Create a new file
+:map <leader>nf <Action>(NewFile)
+
