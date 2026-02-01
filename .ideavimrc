@@ -36,5 +36,82 @@ nnoremap <leader>e :ActivateProjectView<CR>
 nnoremap <leader>fs <Action>(FileStructurePopup)
 
 " Create a new file
-:map <leader>nf <Action>(NewFile)
+nnoremap <leader>nf :action NewFile<CR>
+nnoremap <leader>pp :action ActivateProjectToolWindow<CR>
+
+nmap <leader>e <action>(OpenHarpoon)
+nmap <leader>c <action>(CloseHarpoon)
+nmap <leader>a <action>(AddFile)
+nmap <leader>h <action>(com.obertdev.harpoonminimal.actions.OpenFile1Action)
+nmap <leader>j <action>(com.obertdev.harpoonminimal.actions.OpenFile2Action)
+nmap <leader>k <action>(com.obertdev.harpoonminimal.actions.OpenFile3Action)
+nmap <leader>l <action>(com.obertdev.harpoonminimal.actions.OpenFile4Action)
+
+nnoremap <leader>o :action Back<CR>
+nnoremap <leader>i :action Forward<CR>
+
+" Jump to slot
+nnoremap <leader>h1 :action GotoBookmark1<CR>
+nnoremap <leader>h2 :action GotoBookmark2<CR>
+nnoremap <leader>h3 :action GotoBookmark3<CR>
+nnoremap <leader>h4 :action GotoBookmark4<CR>
+nnoremap <leader>h5 :action GotoBookmark5<CR>
+nnoremap <leader>h6 :action GotoBookmark5<CR>
+
+" Set/toggle slot (overwrites if already used)
+nnoremap <leader>h! :action ToggleBookmark1<CR>
+nnoremap <leader>h@ :action ToggleBookmark2<CR>
+nnoremap <leader>h# :action ToggleBookmark3<CR>
+nnoremap <leader>h$ :action ToggleBookmark4<CR>
+nnoremap <leader>h% :action ToggleBookmark5<CR>
+nnoremap <leader>h^ :action ToggleBookmark5<CR>
+
+
+
+
+" File search
+nmap <Leader>sf <action>(com.mituuz.fuzzier.search.Fuzzier)
+nmap <Leader>sg <action>(com.mituuz.fuzzier.search.FuzzierVCS)
+
+" Mover
+nmap <Leader>fm <action>(com.mituuz.fuzzier.operation.FuzzyMover)
+
+" Grepping
+nmap <Leader>ss <action>(com.mituuz.fuzzier.grep.FuzzyGrepCI)
+nmap <Leader>sS <action>(com.mituuz.fuzzier.grep.FuzzyGrep)
+nmap <Leader>st <action>(com.mituuz.fuzzier.grep.FuzzyGrepOpenTabsCI)
+nmap <Leader>sT <action>(com.mituuz.fuzzier.grep.FuzzyGrepOpenTabs)
+nmap <Leader>sb <action>(com.mituuz.fuzzier.grep.FuzzyGrepCurrentBufferCI)
+nmap <Leader>sB <action>(com.mituuz.fuzzier.grep.FuzzyGrepCurrentBuffer)
+
+" New file
+nnoremap <leader>fn :action NewElement<CR>
+
+" Recent
+nnoremap <leader>fr :action RecentFiles<CR>
+
+
+nnoremap <leader>wq :action CloseAllEditorsInActiveTabGroup<CR>
+
+
+" Close other splits
+nnoremap <leader>wo :action CloseAllEditorsButActive<CR>
+
+" Maximize current split
+nnoremap <leader>wm :action MaximizeEditorInSplit<CR>
+
+nnoremap <leader>wv :action SplitVertically<CR>
+nnoremap <leader>wu :action UnsplitAll<CR>
+
+" Go to terminal
+nnoremap <leader>tt :action ActivateTerminalToolWindow<CR>
+
+" Go back to editor (from terminal or any tool window)
+nnoremap <leader>te :action Escape<CR>
+
+" Optional: close terminal window completely
+nnoremap <leader>tq :action HideActiveWindow<CR>
+
+nnoremap <leader>ur <C-r>
+
 
